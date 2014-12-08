@@ -80,3 +80,26 @@ td, th { padding: 0; }
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
 .truncate { overflow: hidden; padding-bottom: 0.1em; width: 100%; text-overflow: ellipsis; white-space: nowrap; }
+
+// Webfonts
+// ----------------------------------------------------------------------------
+@font-face {
+	font-family: 'Metric-Regular';
+	src: url('../fonts/Metric-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Metric-Regular.woff') format('woff'),
+		 url('../fonts/Metric-Regular.ttf') format('truetype'),
+		 url('../fonts/Metric-Regular.svg#Metric-Regular') format('svg');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+}
+@font-face {
+	font-family: 'Metric-ThinItalic';
+	src: url('../fonts/Metric-ThinItalic.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Metric-ThinItalic.woff') format('woff'),
+		 url('../fonts/Metric-ThinItalic.ttf')  format('truetype'),
+		 url('../fonts/Metric-ThinItalic.svg#Metric-ThinItalic') format('svg');
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+}

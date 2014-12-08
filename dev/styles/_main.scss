@@ -3,16 +3,25 @@
 
 // Foundation
 // ----------------------------------------------------------------------------
+/*
 html,
 button,
 input,
 optgroup,
 select,
 textarea {
-	// font-family: 'FuturaPTHeavy', sans-serif;
+	font-family: "ff-tisa-web-pro", Georgia, Times, "Times New Roman", serif;
 }
+*/
 body {
-	// position: relative;
+	padding: 4.8rem 2rem 6rem 2rem;
+	background-color: hsla(215,24%,14%,1);
+	background-image: url('../img/bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	border-top: 0.6rem solid hsla(47,44%,61%,1);
 }
 ::selection {
 	background-color: hsla(0,0%,0%,1);
@@ -38,9 +47,6 @@ input:focus::-webkit-input-placeholder {
 
 // Transitions
 // ----------------------------------------------------------------------------
-svg {
-	transition: fill 0.2s ease-in-out;
-}
 a,
 a::before,
 a::after,
@@ -48,6 +54,12 @@ span,
 input,
 button {
 	transition: all 0.2s ease-in-out;
+}
+svg {
+	transition: fill 0.2s ease-in-out;
+}
+[data-modal] {
+	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 // General Styles
@@ -60,18 +72,17 @@ svg {
 	height: 100%;
 }
 
+
 /*
 // --- Form Elements --- \\
-form input[type="tel"],
-form input[type="text"],
-form input[type="email"],
-form input[type="password"] {
+form input[type="email"] {
 	margin-bottom: 12rem;
 	width: 100%;
 	height: 20rem;
 	font-size: 9rem;
 	text-align: center;
 	color: hsla(141,100%,18%,1);
+	background-color: hsla(215,24%,14%,1);
 	border: 0.6rem solid hsla(141,100%,18%,1);
 }
 // + interaction + \\
@@ -84,9 +95,11 @@ form input[type="password"]:focus {
 }
 */
 
+
 // ==|== common components ====================================================
 // ============================================================================
 
+/*
 // Containers
 // ----------------------------------------------------------------------------
 [data-container] {
@@ -96,7 +109,9 @@ form input[type="password"]:focus {
 [data-container="width-926"] {
 	width: 92.6rem;
 }
+*/
 
+/*
 // CSS Loader
 // ----------------------------------------------------------------------------
 div.loader {
@@ -135,26 +150,32 @@ div.loader div.circle-2 {;
 		transform: scale(1.0);
 	}
 }
+*/
 
 // Regular Button
 // ----------------------------------------------------------------------------
 .btn_reg {
 	display: inline-block;
-	position: absolute;
-	padding: 0 2rem;
-	height: 6.6rem;
-	font-size: 2.6rem;
-	line-height: 6rem; // height - border
+	margin: 0 auto;
+	padding: 0 2.4rem;
+	height: 5.6rem;
+	font-family: 'Metric-Regular', Futura, 'Trebuchet MS', Arial, sans-serif;
+	font-size: 2.1rem;
+	letter-spacing: 0.1rem;
+	line-height: 5.8rem; // height - border
 	text-align: center;
 	text-transform: uppercase;
-	border: 0.3rem solid hsla(0,0%,100%,1);
+	color: hsla(47,44%,61%,1);
+	background-color: hsla(47,44%,61%,0);
+	border: 0.2rem solid hsla(47,44%,61%,1);
 }
 // + interaction + \\
 .btn_reg:hover {
-	opacity: 0.8;
+	color: hsla(215,24%,14%,1);
+	background-color: hsla(47,44%,61%,1);
 }
 .btn_reg:active {
-	opacity: 1;
+	opacity: 0.8;
 }
 
 // Modals
@@ -166,7 +187,7 @@ div.loader div.circle-2 {;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: hsla(0,0%,100%,0.96);
+	background-color: hsla(0,0%,0%,0.8);
 	opacity: 0;
 	visibility: hidden;
 }
@@ -178,10 +199,9 @@ div.loader div.circle-2 {;
 .wrap_content {
 	position: absolute;
 	top: 50%;
-	right: 0;
-	left: 0;
+	left: 50%;
 	text-align: center;
-	transform: translateY(-50%);
+	transform: translate(-50%, -50%);
 }
 
 
@@ -193,10 +213,36 @@ div.loader div.circle-2 {;
 header {
 	margin-bottom: 4.8rem;
 }
+svg.svg_logo-nn {
+	margin: 0 auto;
+	width: 18rem;
+	height: 14.8rem;
+	fill: hsla(47,44%,61%,1);
+}
 
 // Footer
 // ----------------------------------------------------------------------------
-footer {
+footer ul {
+	font-family: "ff-tisa-web-pro", Georgia, Times, "Times New Roman", serif;
+	font-size: 1.3rem;
+	text-align: center;
+	color: hsla(47,44%,61%,1);
+}
+footer ul li {
+	margin-bottom: 0.8rem;
+}
+footer ul li:last-child {
+	margin-bottom: 0;
+}
+footer ul li a {
+	color: hsla(47,44%,61%,1);
+}
+// + interaction + \\
+footer ul li a:hover {
+	color: hsla(47,44%,81%,1);
+}
+footer ul li a:active {
+	color: hsla(47,44%,71%,1);
 }
 
 
@@ -205,10 +251,42 @@ footer {
 
 // Home Page
 // ----------------------------------------------------------------------------
-body.page_home {
-	background-image: url('../img/bg_home.jpg');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center center;
-	background-size: cover;
+main {
+	margin: 0 auto 8rem auto;
+	max-width: 60rem;
+	text-align: center;
 }
+main p {
+	margin: 0 auto 6rem auto;
+	width: 28.8rem;
+	font-family: 'ff-tisa-web-pro', Georgia, Times, 'Times New Roman', serif;
+	font-size: 1.5rem;
+	line-height: 1.4;
+	color: hsla(47,44%,61%,1);
+}
+
+// + tagline + \\
+div.tagline {
+	margin-bottom: 4rem;
+}
+svg.svg_tagline {
+	fill: hsla(47,44%,61%,1);
+}
+
+// --- Mailchimp Modal --- \\
+
+article.wrap_content {
+	width: 30rem; // 34.4rem
+	height: 21.2rem;
+	background-color: hsla(47,44%,61%,1);
+	border-radius: 2rem;
+}
+
+
+
+
+
+
+
+
+

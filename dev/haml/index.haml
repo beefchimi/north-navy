@@ -1,24 +1,60 @@
 !!!
-%html#root{:lang => "en"}
+%html{:lang => "en"}
 
-	= Haml::Engine.new(File.read("dev/haml/partials/common/_html_head.haml")).render
+	= Haml::Engine.new(File.read("dev/haml/partials/_html_head.haml")).render
 
-	%body#home.page_home
+	%body
+
 
 		:plain
 			<!-- inject:svg --><!-- endinject -->
 
-		%main{:role => "main", "data-container" => "width-686"}
 
-			#logo_sportsmans.logo_sportsmans
-				%img{:src => "assets/img/logo_sportsmans.png", :alt => "Sportsman's Warehouse"}
+		%header
 
-			%h1 Welcome to America’s Premier Outfitter.&trade;
+			%svg.svg_logo-nn
+				%use{"xlink:href" => "#logo-nn"}
 
-			%a.shop_hunting.home_link{:href => "/prod-cat.html", :title => "Shop Hunting"}
-				%span.wrap_text Shop Hunting
 
-			%a.shop_departments.home_link{:href => "/prod-dept.html", :title => "Shop All Departments"}
-				%span.wrap_text Shop All Departments
+		%main{:role => "main"}
 
-		= Haml::Engine.new(File.read("dev/haml/partials/common/_html_scripts.haml")).render
+			.tagline.wrap_svg
+
+				%h1.visuallyhidden A Northern italian kitchen inspired by the Bacari of Venice.
+
+				%svg.svg_tagline
+					%use{"xlink:href" => "#tagline"}
+
+			%p Reservations will be available soon. Sign up to be notified when we are ready to take them.
+
+			%a#launch_modal.btn_reg{:href => "#", :title => "Signup for our newsletter"} Sign Up
+
+			%div{"data-modal" => "mailchimp"}
+
+				%article#mc_embed_signup.wrap_content
+
+					%form#mc-embedded-subscribe-form.validate{:action => "//northandnavy.us9.list-manage.com/subscribe/post-json?u=2fb512a2877f471ca178ebe49&amp;id=0c8aa102e9&c=?", :method => "get", :name => "mc-embedded-subscribe-form", :novalidate => true}
+
+						.wrap_input-text.mc-field-group
+							%label.visuallyhidden{:for => "mce-EMAIL"} Email Address
+							%input#mce-EMAIL.required.email{:type => "email", :name => "EMAIL", :value => "", :autocomplete => "off", :placeholder => "Enter your email address", :required => true}
+
+						#do-not-remove.visuallyhidden
+							%input{:type => "text", :name => "b_2fb512a2877f471ca178ebe49_0c8aa102e9", :tabindex => "-1", :value => ""}
+
+						.wrap_input-submit
+							%input#mc-embedded-subscribe.button{:type => "submit", :value => "Sign Up", :name => "subscribe"}
+
+					.mce-response
+						%h3#mce-response-text
+
+
+		%footer
+			%ul#contact
+				%li
+					%a{:href => "http://www.twitter.com/northandnavy", :title => "Visit us on Twitter", :target => "_blank"} @northandnavy
+				%li 613.232.6289
+				%li 226 Nepean St.
+
+
+		= Haml::Engine.new(File.read("dev/haml/partials/_html_scripts.haml")).render
