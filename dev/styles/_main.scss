@@ -192,9 +192,11 @@ main h1 {
 	color: hsla(47,44%,61%,1);
 }
 */
-main p {
+div.the-content {
 	margin: 0 auto 6rem auto;
-	width: 26.4rem; // 28.8rem;
+	width: 26.8rem; // 28.8rem;
+}
+div.the-content p {
 	font-family: 'ff-tisa-web-pro', Georgia, Times, 'Times New Roman', serif;
 	font-size: 1.5rem;
 	line-height: 1.5;
