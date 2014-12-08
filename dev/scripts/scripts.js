@@ -19,6 +19,7 @@ jQuery(document).ready(function($) {
 			$mailchimpInput = $('#mce-EMAIL'),
 			$responseText   = $('#mce-response-text');
 
+		// reveal signup modal on button click
 		$modalButton.on('click', function(e) {
 
 			$modalOverlay.addClass('visible');
@@ -27,6 +28,23 @@ jQuery(document).ready(function($) {
 
 		});
 
+		// hide signup modal on click outside of signup article
+		$modalOverlay.on('click', function(e) {
+
+			if ( !$(e.target).closest('#mc_embed_signup').length ) {
+
+				if( $modalOverlay.hasClass('visible') ) {
+
+					$modalOverlay.removeClass('visible');
+					$signupArticle.removeClass('success');
+
+				}
+
+			}
+
+		});
+
+		// as long as our email input has a value...
 		if ($mailchimpForm.length > 0) {
 
 			$('#mc-embedded-subscribe-form').submit(function(e) {

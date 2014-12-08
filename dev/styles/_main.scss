@@ -28,22 +28,15 @@ body {
 }
 // + autoprefixer does not recognize placeholder + \\
 ::-webkit-input-placeholder {
-	color: hsla(0,0%,100%,1);
+	color: hsla(47,44%,61%,1);
 }
 ::-moz-placeholder {
-	color: hsla(0,0%,100%,1);
+	color: hsla(47,44%,61%,1);
+	opacity: 1;
 }
 :-ms-input-placeholder {
-	color: hsla(0,0%,100%,1);
+	color: hsla(47,44%,61%,1);
 }
-/*
-input::-webkit-input-placeholder {
-	color: hsla(141,100%,18%,1);
-}
-input:focus::-webkit-input-placeholder {
-	color: hsla(141,100%,18%,0.5);
-}
-*/
 
 // Transitions
 // ----------------------------------------------------------------------------
@@ -58,8 +51,12 @@ button {
 svg {
 	transition: fill 0.2s ease-in-out;
 }
-[data-modal] {
-	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+[data-modal],
+article.wrap_content form {
+	transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+div.mce-response {
+	transition: opacity 0.4s ease-in-out 0.4s, visibility 0.4s ease-in-out 0.4s;
 }
 
 // General Styles
@@ -71,86 +68,25 @@ svg {
 	width: 100%;
 	height: 100%;
 }
-
-
-/*
 // --- Form Elements --- \\
 form input[type="email"] {
-	margin-bottom: 12rem;
+	margin-bottom: 1rem;
 	width: 100%;
-	height: 20rem;
-	font-size: 9rem;
+	height: 5.6rem;
+	font-family: 'ff-tisa-web-pro', Georgia, Times, 'Times New Roman', serif;
+	font-size: 1.8rem;
 	text-align: center;
-	color: hsla(141,100%,18%,1);
+	color: hsla(47,44%,61%,1);
 	background-color: hsla(215,24%,14%,1);
-	border: 0.6rem solid hsla(141,100%,18%,1);
 }
 // + interaction + \\
-form input[type="tel"]:focus,
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form input[type="password"]:focus {
-	color: hsla(141,100%,24%,1);
-	border-color: hsla(141,100%,24%,1);
+form input[type="email"]:focus {
+	background-color: hsla(215,24%,24%,1);
 }
-*/
 
 
 // ==|== common components ====================================================
 // ============================================================================
-
-/*
-// Containers
-// ----------------------------------------------------------------------------
-[data-container] {
-	margin-left: auto;
-	margin-right: auto;
-}
-[data-container="width-926"] {
-	width: 92.6rem;
-}
-*/
-
-/*
-// CSS Loader
-// ----------------------------------------------------------------------------
-div.loader {
-	margin: 6rem auto 0 auto;
-	width: 7rem;
-	text-align: center;
-	opacity: 0;
-	visibility: hidden;
-}
-div.loader.loading {
-	opacity: 1;
-	visibility: visible;
-}
-div.loader div.loader_circle {
-	display: inline-block;
-	width: 1.8rem;
-	height: 1.8rem;
-	background-color: hsla(0,0%,80%,1);
-	border-radius: 100%;
-	animation: loadPulse 1.4s ease-in-out infinite both;
-}
-div.loader div.circle-1 {
-	animation-delay: -0.32s;
-}
-div.loader div.circle-2 {;
-	animation-delay: -0.16s;
-}
-// + animation + \\
-@keyframes loadPulse {
-	0%,
-	80%,
-	100% {
-		transform: scale(0.0);
-	}
-	40% {
-		transform: scale(1.0);
-	}
-}
-*/
 
 // Regular Button
 // ----------------------------------------------------------------------------
@@ -165,17 +101,7 @@ div.loader div.circle-2 {;
 	line-height: 5.8rem; // height - border
 	text-align: center;
 	text-transform: uppercase;
-	color: hsla(47,44%,61%,1);
-	background-color: hsla(47,44%,61%,0);
-	border: 0.2rem solid hsla(47,44%,61%,1);
-}
-// + interaction + \\
-.btn_reg:hover {
-	color: hsla(215,24%,14%,1);
-	background-color: hsla(47,44%,61%,1);
-}
-.btn_reg:active {
-	opacity: 0.8;
+	border: 0.2rem solid hsla(0,0%,0%,1);
 }
 
 // Modals
@@ -225,6 +151,7 @@ svg.svg_logo-nn {
 footer ul {
 	font-family: "ff-tisa-web-pro", Georgia, Times, "Times New Roman", serif;
 	font-size: 1.3rem;
+	font-feature-settings: 'onum';
 	text-align: center;
 	color: hsla(47,44%,61%,1);
 }
@@ -256,15 +183,35 @@ main {
 	max-width: 60rem;
 	text-align: center;
 }
-main p {
-	margin: 0 auto 6rem auto;
-	width: 28.8rem;
-	font-family: 'ff-tisa-web-pro', Georgia, Times, 'Times New Roman', serif;
-	font-size: 1.5rem;
-	line-height: 1.4;
+/*
+main h1 {
+	font-family: 'Metric-ThinItalic', Futura, 'Trebuchet MS', Arial, sans-serif;
+	font-size: 4.5rem;
+	line-height: 2;
+	text-transform: uppercase;
 	color: hsla(47,44%,61%,1);
 }
-
+*/
+main p {
+	margin: 0 auto 6rem auto;
+	width: 26.4rem; // 28.8rem;
+	font-family: 'ff-tisa-web-pro', Georgia, Times, 'Times New Roman', serif;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	color: hsla(47,44%,61%,1);
+}
+main a.btn_reg {
+	color: hsla(47,44%,61%,1);
+	background-color: hsla(47,44%,61%,0);
+	border-color: hsla(47,44%,61%,1);
+}
+main a.btn_reg:hover {
+	color: hsla(215,24%,14%,1);
+	background-color: hsla(47,44%,61%,1);
+}
+main a.btn_reg:active {
+	opacity: 0.8;
+}
 // + tagline + \\
 div.tagline {
 	margin-bottom: 4rem;
@@ -272,21 +219,57 @@ div.tagline {
 svg.svg_tagline {
 	fill: hsla(47,44%,61%,1);
 }
-
 // --- Mailchimp Modal --- \\
-
 article.wrap_content {
+	padding: 4rem 2rem 0rem 2rem;
 	width: 30rem; // 34.4rem
 	height: 21.2rem;
 	background-color: hsla(47,44%,61%,1);
 	border-radius: 2rem;
 }
-
-
-
-
-
-
-
-
-
+div.wrap_input-text {
+	margin-bottom: 2rem;
+}
+div.wrap_input-submit input.btn_reg {
+	color: hsla(215,24%,14%,1);
+	background-color: hsla(215,24%,14%,0);
+	border-color: hsla(215,24%,14%,1);
+}
+div.wrap_input-submit input.btn_reg:hover {
+	color: hsla(47,44%,61%,1);
+	background-color: hsla(215,24%,14%,1);
+}
+div.wrap_input-submit input.btn_reg:active {
+	background-color: hsla(215,24%,24%,1);
+	border-color: hsla(215,24%,24%,1);
+}
+// + response + \\
+div.mce-response {
+	display: table;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+}
+div.mce-response h2 {
+	display: table-cell;
+	padding: 0 2rem;
+	font-family: 'ff-tisa-web-pro', Georgia, Times, 'Times New Roman', serif;
+	font-size: 1.8rem;
+	line-height: 1.5;
+	color: hsla(215,24%,14%,1);
+	vertical-align: middle;
+}
+article.success form {
+	opacity: 0;
+	visibility: hidden;
+}
+article.success div.mce-response {
+	opacity: 1;
+	visibility: visible;
+}

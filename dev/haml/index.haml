@@ -35,7 +35,7 @@
 
 					%form#mc-embedded-subscribe-form.validate{:action => "//northandnavy.us9.list-manage.com/subscribe/post-json?u=2fb512a2877f471ca178ebe49&amp;id=0c8aa102e9&c=?", :method => "get", :name => "mc-embedded-subscribe-form", :novalidate => true}
 
-						.wrap_input-text.mc-field-group
+						.wrap_input-text
 							%label.visuallyhidden{:for => "mce-EMAIL"} Email Address
 							%input#mce-EMAIL.required.email{:type => "email", :name => "EMAIL", :value => "", :autocomplete => "off", :placeholder => "Enter your email address", :required => true}
 
@@ -43,10 +43,10 @@
 							%input{:type => "text", :name => "b_2fb512a2877f471ca178ebe49_0c8aa102e9", :tabindex => "-1", :value => ""}
 
 						.wrap_input-submit
-							%input#mc-embedded-subscribe.button{:type => "submit", :value => "Sign Up", :name => "subscribe"}
+							%input#mc-embedded-subscribe.btn_reg{:type => "submit", :value => "Sign Up", :name => "subscribe"}
 
 					.mce-response
-						%h3#mce-response-text
+						%h2#mce-response-text
 
 
 		%footer
