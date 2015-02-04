@@ -7,13 +7,43 @@ jQuery(document).ready(function($) {
 	// var elBody = document.body;
 
 
+	// Fratelli Message
+	// ----------------------------------------------------------------------------
+	function message() {
+
+		var $messageOverlay = $('#modal-message'),
+			$messageClose   = $('#message-close');
+
+		$messageClose.on('click', function(e) {
+
+			$messageOverlay.removeClass('visible');
+
+		});
+
+		$messageOverlay.on('click', function(e) {
+
+			if ( !$(e.target).closest('article.message').length ) {
+
+				if( $messageOverlay.hasClass('visible') ) {
+
+					$messageOverlay.removeClass('visible');
+
+				}
+
+			}
+
+		});
+
+	}
+
+
 	// Mailchimp AJAX Submission
 	// ----------------------------------------------------------------------------
 	function mailchimpAJAX() {
 
 		var emailfilter     = /^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i,
 			$modalButton    = $('#launch_modal'),
-			$modalOverlay   = $('div[data-modal]'),
+			$modalOverlay   = $('#modal-mailchimp'),
 			$signupArticle  = $('#mc_embed_signup'),
 			$mailchimpForm  = $('#mc-embedded-subscribe-form'),
 			$mailchimpInput = $('#mce-EMAIL'),
@@ -100,6 +130,7 @@ jQuery(document).ready(function($) {
 	// Initialize Primary Functions
 	// ----------------------------------------------------------------------------
 	mailchimpAJAX();
+	message();
 
 
 }); // end jQuery

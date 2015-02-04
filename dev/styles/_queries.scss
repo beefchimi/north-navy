@@ -31,6 +31,27 @@
 		width: 34.4rem;
 	}
 
+	// Fratelli Message
+	// ----------------------------------------------------------------------------
+	article.message {
+		height: 62rem;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: auto;
+	}
+	article.message div.message_content {
+		padding-top: 6.8rem;
+		padding-bottom: 6.8rem;
+	}
+	article.message div.message_content p {
+		margin-bottom: 3.2rem;
+		font-size: 1.7rem;
+	}
+	article.message a.wrap_svg {
+		margin-top: 8rem;
+		width: 2.6rem;
+		height: 2.6rem;
+	}
+
 }
 
 /*

@@ -1,7 +1,7 @@
 !!!
 %html{:lang => "en"}
 
-	= Haml::Engine.new(File.read("dev/haml/partials/_html_head.haml")).render
+	= Haml::Engine.new(File.read("dev/haml/partials/_doc_head.haml")).render
 
 	%body
 
@@ -31,7 +31,7 @@
 
 			%a#launch_modal.btn_reg{:href => "#", :title => "Signup for our newsletter"} Sign Up
 
-			%div{"data-modal" => "mailchimp"}
+			%div#modal-mailchimp{"data-modal" => "mailchimp"}
 
 				%article#mc_embed_signup.wrap_content
 
@@ -59,5 +59,7 @@
 				%li 226 Nepean St.
 
 
-		= Haml::Engine.new(File.read("dev/haml/partials/_html_scripts.haml")).render
-		= Haml::Engine.new(File.read("dev/haml/partials/_js_analytics.haml")).render
+		= Haml::Engine.new(File.read("dev/haml/partials/_html_message.haml")).render
+
+
+		= Haml::Engine.new(File.read("dev/haml/partials/_doc_scripts.haml")).render

@@ -61,6 +61,8 @@ div.mce-response {
 
 // General Styles
 // ----------------------------------------------------------------------------
+
+/*
 svg {
 	display: block;
 }
@@ -68,6 +70,21 @@ svg {
 	width: 100%;
 	height: 100%;
 }
+*/
+
+// + SVGs + \\
+#svgInject {
+	display: none;
+	visibility: hidden;
+}
+.wrap_svg {
+	display: block;
+}
+.wrap_svg svg {
+	width: 100%;
+	height: 100%;
+}
+
 // --- Form Elements --- \\
 form input[type="email"] {
 	margin-bottom: 1rem;
@@ -274,4 +291,53 @@ article.success form {
 article.success div.mce-response {
 	opacity: 1;
 	visibility: visible;
+}
+
+// Fratelli Message
+// ----------------------------------------------------------------------------
+article.message {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	background-color: hsla(215,24%,14%,1);
+	background-image: url('../img/bg_message.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+}
+article.message div.message_content {
+	margin: 0 auto;
+	padding: 4rem 2rem;
+	max-width: 78.4rem; // 755px + padding (40px)
+}
+article.message div.message_content p {
+	margin-bottom: 2rem;
+	font-family: 'ff-tisa-web-pro', Georgia, Times, 'Times New Roman', serif;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	text-align: center;
+	color: hsla(47,44%,61%,1);
+}
+article.message div.message_content p:last-child {
+	margin-bottom: 0;
+}
+article.message a.wrap_svg {
+	margin: 6rem auto 0 auto;
+	width: 3.2rem;
+	height: 3.2rem;
+}
+article.message a svg {
+	fill: hsla(47,44%,61%,1);
+}
+article.message a:hover svg {
+	fill: hsla(47,44%,100%,1);
+}
+article.message a:active svg {
+	fill: hsla(47,44%,91%,1);
 }
