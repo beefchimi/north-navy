@@ -18,6 +18,8 @@ jQuery(document).ready(function($) {
 
 			$messageOverlay.removeClass('visible');
 
+			e.preventDefault();
+
 		});
 
 		$messageOverlay.on('click', function(e) {
