@@ -1,7 +1,7 @@
 {
-  "name": "north-navy",
+  "name": "northnavy-splash",
   "version": "0.0.1",
-  "description": "Site files for North and Navy",
+  "description": "Site files for North & Navy splash page",
   "main": "gulpfile.js",
   "devDependencies": {
     "cheerio": "^0.18.0",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/beefchimi/north-navy.git"
+    "url": "https://github.com/beefchimi/northnavy-splash.git"
   },
   "keywords": [
     "dulmage",
@@ -38,7 +38,7 @@
   ],
   "author": "Curtis Dulmage",
   "bugs": {
-    "url": "https://github.com/beefchimi/north-navy/issues"
+    "url": "https://github.com/beefchimi/northnavy-splash/issues"
   },
-  "homepage": "https://github.com/beefchimi/north-navy"
+  "homepage": "https://github.com/beefchimi/northnavy-splash"
 }
